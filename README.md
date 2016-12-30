@@ -5,4 +5,5 @@
     - Basics 
         * Pure functions
         * Tests with Mocha&Chai
-    - OOP:
+    - OOP
+        * Tests with Mocha&Chai
