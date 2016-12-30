@@ -1,6 +1,8 @@
 # Propulsion Academy Pre-Work
 
-1. Google look replica √
+1. HTML&CSS: Google look replica √
 2. JavaScript:
-    * Pure functions
-    * Tests with Mocha&Chai
+    - Basics √
+        * Pure functions
+        * Tests with Mocha&Chai
+    - OOP:

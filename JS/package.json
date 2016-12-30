@@ -4,7 +4,7 @@
   "description": "JS exercises as pre-work for the Propulsion Academy bootcamp",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -w */*.spec.js"
+    "test": "mocha */*.spec.js"
   },
   "keywords": [
     "js",
