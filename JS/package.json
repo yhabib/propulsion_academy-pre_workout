@@ -1,0 +1,20 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "JS exercises as pre-work for the Propulsion Academy bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -w */*.spec.js"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "mocha"
+  ],
+  "author": "Yusef Habib",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
