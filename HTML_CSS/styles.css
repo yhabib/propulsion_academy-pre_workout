@@ -8,29 +8,27 @@ header, footer, main {
 }
 
 header {    
-    height: 50px;
+    height: 60px;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
 }
 footer {
-    border: 1px solid black; 
-    height: 50px;
+    height: 40px;
     flex-flow: row nowrap;
 
 }
 main {
-    border: 1px solid black; 
     height: calc(100% - 100px);
     flex-flow: column;
-    padding-top: 15%;
+    padding-top: 150px;
     align-items: center;
 }
 
 
 header ul {
-    height: 30px;
-    text-align: left;
+    height: 40px;
+    margin-right: 20px;
 }
 
 header li {
@@ -44,12 +42,28 @@ header li:first-child {
 header a {
     color: black;
     text-decoration: none;
-    font-family: Arial, sans-serif;
     line-height: 24px;
-    font-size: 13px;
+    opacity: .75;
 }
 header a:hover {
     text-decoration: underline;
+}
+
+.icon_settings {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('resources/pics.png');
+    background-position-x: -132px;
+    background-position-y: -38px;
+    background-size: 528px 68px;
+    vertical-align: middle;
+    opacity: .55;
+    cursor: pointer;
+}
+.icon_settings:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 header .button {
@@ -61,6 +75,7 @@ header .button {
     font-weight: bold;
     line-height: 28px;
     cursor: default;
+    opacity: 1;
 }
 header .button:hover {
     text-decoration: none;
@@ -75,13 +90,80 @@ main .logo {
     width: 272px;
 }
 main .input {
-
+    width: 584px;
+    height: 44px;
+    margin-top: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.input input {
+    border: none;
+    width: 545px;
+    height: 42px;
+    padding-left: 10px;
+    font-size: 16px;
 }
 
 main .micro {
     background-image: url('resources/micro.png');
-    background-size: 23px 18px;
+    background-size: 24px 24px;
     display: inline-block;
-    height: 18px;
-    width: 23px;
+    width: 18px;
+    height: 23px;
+    vertical-align: text-bottom;
+}
+.micro:hover {
+    cursor: pointer;
+}
+main .buttons {
+    margin-top: 30px;
+}
+.buttons > div {
+    display: inline-block;
+    height: 34px;
+    padding: 0 16px;
+    background-color: rgb(242, 242, 242);
+    border: 1px solid rgb(242, 242, 242);
+    color: rgb(117, 117, 117);
+    font-weight: bold;
+    line-height: 32px;
+    border-radius: 2px;
+}
+.buttons > div:first-child {
+    margin-right: 5px;
+}
+.buttons > div:hover {
+    cursor: pointer;
+    color: rgb(34, 34, 34);
+    background-color: rgb(248, 248, 248);
+    border-color: rgb(198, 198, 198);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+footer {
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(228, 228, 228);
+    padding: 0 27px;
+}
+footer ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+
+footer a {
+    padding-left: 27px;
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+    line-height: 40px;
+}
+footer li:first-child a {
+    padding-left: 0px;
+}
+footer a:hover {
+    text-decoration: underline;
 }
