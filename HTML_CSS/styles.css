@@ -1,0 +1,87 @@
+html, body {
+    background-color: white;
+    height: 100%;
+}
+
+header, footer, main {
+    display: flex;
+}
+
+header {    
+    height: 50px;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer {
+    border: 1px solid black; 
+    height: 50px;
+    flex-flow: row nowrap;
+
+}
+main {
+    border: 1px solid black; 
+    height: calc(100% - 100px);
+    flex-flow: column;
+    padding-top: 15%;
+    align-items: center;
+}
+
+
+header ul {
+    height: 30px;
+    text-align: left;
+}
+
+header li {
+    display: inline;
+    list-style: none;
+    margin-left: 15px;
+}
+header li:first-child {
+    margin-left: 0px;
+}
+header a {
+    color: black;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    line-height: 24px;
+    font-size: 13px;
+}
+header a:hover {
+    text-decoration: underline;
+}
+
+header .button {
+    color: white;
+    background-color: rgb(66, 133, 244);
+    border: 2px solid rgb(66, 133, 244);
+    border-radius: 2px;
+    padding: 0 12px;
+    font-weight: bold;
+    line-height: 28px;
+    cursor: default;
+}
+header .button:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+main .logo {
+    background-image: url("resources/logo.png");
+    background-repeat: none;
+    background-size: 272px 92px;
+    height: 92px;
+    width: 272px;
+}
+main .input {
+
+}
+
+main .micro {
+    background-image: url('resources/micro.png');
+    background-size: 23px 18px;
+    display: inline-block;
+    height: 18px;
+    width: 23px;
+}
