@@ -32,7 +32,7 @@ header ul {
 }
 
 header li {
-    display: inline;
+    display: inline-block;
     list-style: none;
     margin-left: 15px;
 }
@@ -67,6 +67,7 @@ header a:hover {
 }
 
 header .button {
+    display: inline-block;
     color: white;
     background-color: rgb(66, 133, 244);
     border: 2px solid rgb(66, 133, 244);
