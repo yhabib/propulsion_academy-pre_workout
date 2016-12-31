@@ -81,6 +81,7 @@ describe('-- JS Object Oriented Programming --', () => {
             player.add(new Track('Ritchie Valens', 'La Bamba', 'La Bamba'));
             player.add(new Track('Impala Ray', 'Stay', 'StayAlbum'));
             player.add(new Track('Red Hot Chili Peppers', 'Californication', 'Californication'));
+            player.add(new Track('Red Hot Chili Peppers', 'Snow', 'Stadium Arcadium'));
         });
         it('should have two tracks', () => {
            player.tracks.length.should.equals(4);

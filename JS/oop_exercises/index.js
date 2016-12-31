@@ -59,22 +59,22 @@ Player.prototype.getTracks = function () {
     return msg;
 };
 
+var id;
 Player.prototype.playOn = function () {
     console.log(this.tracks[this.currentTrack - 1].play());
-    setInterval(() => {
+    id = setInterval(() => {
         if(this.currentTrack < this.tracks.length) {
             this.currentTrack++;
             console.log(this.tracks[this.currentTrack - 1].play());
         }
     }, 2000);
-    console.log(this._id);
-    
-
 };
 
 Player.prototype.stop = function () {
     setTimeout(() => {
-    }, 3000);
+        clearInterval(id);
+        console.log("Stopped the player");
+    }, 5000);
 };
 
 module.exports.player = Player;
