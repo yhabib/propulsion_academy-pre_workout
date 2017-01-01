@@ -7,3 +7,4 @@
         * Tests with Mocha&Chai
     - OOP
         * Tests with Mocha&Chai
+        * To test it -> cd JS and npm test
