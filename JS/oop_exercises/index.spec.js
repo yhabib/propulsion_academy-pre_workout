@@ -83,8 +83,8 @@ describe('-- JS Object Oriented Programming --', () => {
             player.add(new Track('Red Hot Chili Peppers', 'Californication', 'Californication'));
             player.add(new Track('Red Hot Chili Peppers', 'Snow', 'Stadium Arcadium'));
         });
-        it('should have two tracks', () => {
-           player.tracks.length.should.equals(4);
+        it('should have 5 tracks', () => {
+           player.tracks.length.should.equals(5);
         });
         it('should play the first', () => {
             player.play().should.equals('Playing: Drive by Incubus');
@@ -99,6 +99,7 @@ describe('-- JS Object Oriented Programming --', () => {
 2. La Bamba from the album La Bamba by Ritchie Valens
 3. Stay from the album StayAlbum by Impala Ray
 4. Californication from the album Californication by Red Hot Chili Peppers
+5. Snow from the album Stadium Arcadium by Red Hot Chili Peppers
 ----------------------------------------`;
             player.getTracks().should.equals(output);
         });
