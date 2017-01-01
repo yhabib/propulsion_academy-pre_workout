@@ -118,13 +118,23 @@ describe('-- JS basic algorithms --', () => {
         let inputA = 8,
             outputA = true,
             inputB = 24,
-            outputB = false;
+            outputB = false,
+            inputC = 1,
+            outputC = true,
+            inputD = 0,
+            outputD = false;
 
         it(`should be equal to ${outputA}`, () => {
             f.is_power_of_two(inputA).should.equals(outputA);
         });
         it(`should be equal to ${outputB}`, () => {
             f.is_power_of_two(inputB).should.equals(outputB);
+        });
+        it(`should be equal to ${outputC}`, () => {
+            f.is_power_of_two(inputC).should.equals(outputC);
+        });
+        it(`should be equal to ${outputD}`, () => {
+            f.is_power_of_two(inputD).should.equals(outputD);
         });
     });
 });

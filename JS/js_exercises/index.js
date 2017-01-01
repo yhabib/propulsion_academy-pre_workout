@@ -15,37 +15,37 @@ function reverse(input) {
     let arr = input.split(''),
         sol = '';
 
-    while(arr.length > 0)
+    while (arr.length > 0)
         sol += arr.pop();
-    
+
     return sol;
 }
 
 function factorial(num) {
-    if(num < 0)
+    if (num < 0)
         return -1;
-    else if(num === 0)
+    else if (num === 0)
         return 1;
-    else return num * factorial(num-1);
+    else return num * factorial(num - 1);
 }
 
 function longest_word(str) {
     const arr = str.split(' ');
 
-    return arr.reduce((a,b ) => a.length > b.length ? a : b);
+    return arr.reduce((a, b) => a.length > b.length ? a : b);
 }
 
 function sum_nums(num) {
-    if(num === 0) return 0;
-    return num + sum_nums(num-1);
+    if (num === 0) return 0;
+    return num + sum_nums(num - 1);
 }
 
 function time_conversion(time) {
     const min = Math.floor(time / 60),
-          secs = time % 60;
+        secs = time % 60;
     if (secs > 60) {
         secs -= 60;
-        min ++;
+        min++;
     }
     return `${min}:${secs}`;
 }
@@ -61,12 +61,12 @@ function palindrome(word) {
 }
 
 function nearby_az(word) {
-    if(word.indexOf('z') === -1 && word.indexOf('a') === -1) 
+    if (word.indexOf('z') === -1 && word.indexOf('a') === -1)
         return false;
-    
+
     const arr = word.split('z');
-    for(let i=0; i<arr.length; i++) {
-        if(arr[i].lastIndexOf('a') > -1 && arr[i].lastIndexOf('a') < arr[i].length - 3) 
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].lastIndexOf('a') > -1 && arr[i].lastIndexOf('a') < arr[i].length - 3)
             return false;
     }
     return true;
@@ -74,18 +74,15 @@ function nearby_az(word) {
 
 function two_sum(arr) {
     const output = [];
-    for(let i=0; i<Math.floor(arr.length/2); i++) {
-        if(arr.lastIndexOf(-arr[i]) > -1)
+    for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+        if (arr.lastIndexOf(-arr[i]) > -1)
             output.push([i, arr.lastIndexOf(-arr[i])]);
     }
     return output.length > 0 ? output : 'nil';
 }
 
 function is_power_of_two(num) {
-    while(num > 1) {
-        if(num % 2 !== 0)
-            return false;
-        num = Math.floor(num/2);
-    }
-    return true;   
+    if (num === 0) return false;
+    if (num === 1) return true;
+    return num % 2 !== 0 ? false : is_power_of_two(num / 2);
 }
