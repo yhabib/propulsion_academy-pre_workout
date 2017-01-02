@@ -1,11 +1,13 @@
 module.exports = {
     reverse: reverse,
+    reverse2: reverse2,
     factorial: factorial,
     longest_word: longest_word,
     sum_nums: sum_nums,
     time_conversion: time_conversion,
     count_vowels: count_vowels,
     palindrome: palindrome,
+    longestPalindrome: longestPalindrome,
     nearby_az: nearby_az,
     two_sum: two_sum,
     is_power_of_two: is_power_of_two
@@ -19,6 +21,11 @@ function reverse(input) {
         sol += arr.pop();
 
     return sol;
+}
+
+function reverse2(input) {
+    var arr = input.split('');
+    return arr.reduceRight((a, b) => a+b);
 }
 
 function factorial(num) {
@@ -56,8 +63,18 @@ function count_vowels(input) {
 }
 
 function palindrome(word) {
-    const wordReverse = reverse(word);
-    return word === wordReverse;
+    return word === reverse2(word);
+}
+
+function longestPalindrome(input) {
+    const withOutSpaces = input.split(' ').join(''),
+          reversed = reverse2(withOutSpaces);
+
+    console.log(withOutSpaces);
+    console.log(reversed);
+    
+
+    return input;
 }
 
 function nearby_az(word) {

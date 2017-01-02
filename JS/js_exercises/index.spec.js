@@ -10,6 +10,14 @@ describe('-- JS basic algorithms --', () => {
         });
     });
 
+    describe('1.b.Reverse2: Only with build-in methods', () => {
+        const input = 'abcd',
+            output = 'dcba';
+        it(`should be equal to ${output}`, () => {
+            f.reverse2(input).should.equal(output);
+        });
+    });
+
     describe('2.Factorial: Write a method that takes an integer n in an returns its factorial. Assume n >= 0', () => {
         let inputA = 0,
             outputA = 1,
@@ -62,7 +70,7 @@ describe('-- JS basic algorithms --', () => {
         });
     });
 
-    describe('7. Palindrome: Write a method that takes a string and returns true if it is a palindrome. A palindrome is a string that is the same whether written backward or forward. Assume that there are no spaces; only lowercase letters will be given', () => {
+    describe('7. Palindrome: Write a method that takes a string and returns true if it is a palindrome. A palindrome is a string that is the same whether written backward or forward. Only lowercase letters will be given', () => {
         let inputA = 'abcd',
             outputA = false,
             inputB = 'abbba',
@@ -73,6 +81,19 @@ describe('-- JS basic algorithms --', () => {
         });
         it(`should be equal to ${outputB}`, () => {
             f.palindrome(inputB).should.equals(outputB);
+        });        
+    });
+
+    describe('7.b Longest Palindrome', () => {
+        let inputC = 'That trip with a kayak was quite an adventure',
+            outputC = 'kayak',
+            inputD = 'My dad is a racecar athelete',
+            outputD = 'a racecar a';
+        it(`should be equal to ${outputC}`, () => {
+            f.longestPalindrome(inputC).should.equals(outputC);
+        });
+        it(`should be equal to ${outputD}`, () => {
+            f.longestPalindrome(inputD).should.equals(outputD);
         });
     });
 
