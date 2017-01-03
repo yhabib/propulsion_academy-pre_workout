@@ -67,18 +67,13 @@ function palindrome(word) {
 }
 
 function findLongestPalindrome(input) {
-    const withOutSpaces = input.split(' ').join(''),
-          reversed = reverse2(withOutSpaces);
+    const reversed = reverse2(input);
     let longestPalindrome = '';
-    console.log(withOutSpaces);
-    console.log(reversed);
     
-    
-    for(let i=0; i<withOutSpaces.length-1; i++) {
-        let slice = withOutSpaces[i];
-        for(let j=i+1; j<withOutSpaces.length; j++) {
-            slice += withOutSpaces[j];
-            console.log(slice);
+    for(let i=0; i<input.length-1; i++) {
+        let slice = input[i];
+        for(let j=i+1; j<input.length; j++) {
+            slice += input[j];
             if(reversed.includes(slice)) {
                 if(slice.length > longestPalindrome.length)
                     longestPalindrome = slice;
@@ -87,7 +82,7 @@ function findLongestPalindrome(input) {
         }
     }
     
-    return longestPalindrome;
+    return longestPalindrome.trim();
 }
 
 function nearby_az(word) {
