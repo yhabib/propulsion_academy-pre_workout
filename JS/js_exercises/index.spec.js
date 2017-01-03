@@ -90,10 +90,10 @@ describe('-- JS basic algorithms --', () => {
             inputD = 'My dad is a racecar athelete',
             outputD = 'a racecar a';
         it(`should be equal to ${outputC}`, () => {
-            f.longestPalindrome(inputC).should.equals(outputC);
+            f.findLongestPalindrome(inputC).should.equals(outputC);
         });
         it(`should be equal to ${outputD}`, () => {
-            f.longestPalindrome(inputD).should.equals(outputD);
+            f.findLongestPalindrome(inputD).should.equals(outputD);
         });
     });
 

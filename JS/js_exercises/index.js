@@ -7,7 +7,7 @@ module.exports = {
     time_conversion: time_conversion,
     count_vowels: count_vowels,
     palindrome: palindrome,
-    longestPalindrome: longestPalindrome,
+    findLongestPalindrome: findLongestPalindrome,
     nearby_az: nearby_az,
     two_sum: two_sum,
     is_power_of_two: is_power_of_two
@@ -66,15 +66,28 @@ function palindrome(word) {
     return word === reverse2(word);
 }
 
-function longestPalindrome(input) {
+function findLongestPalindrome(input) {
     const withOutSpaces = input.split(' ').join(''),
           reversed = reverse2(withOutSpaces);
-
+    let longestPalindrome = '';
     console.log(withOutSpaces);
     console.log(reversed);
     
-
-    return input;
+    
+    for(let i=0; i<withOutSpaces.length-1; i++) {
+        let slice = withOutSpaces[i];
+        for(let j=i+1; j<withOutSpaces.length; j++) {
+            slice += withOutSpaces[j];
+            console.log(slice);
+            if(reversed.includes(slice)) {
+                if(slice.length > longestPalindrome.length)
+                    longestPalindrome = slice;
+            }
+            else break;
+        }
+    }
+    
+    return longestPalindrome;
 }
 
 function nearby_az(word) {
