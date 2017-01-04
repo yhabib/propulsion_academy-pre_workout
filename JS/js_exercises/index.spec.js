@@ -86,7 +86,7 @@ describe('-- JS basic algorithms --', () => {
 
     describe('7.b Longest Palindrome', () => {
         let inputC = 'That trip with a kayak was quite an adventure',
-            outputC = 'kayak',
+            outputC = ' kayak ',
             inputD = 'My dad is a racecar athelete',
             outputD = 'a racecar a';
         it(`should be equal to ${outputC}`, () => {

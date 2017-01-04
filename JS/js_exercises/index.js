@@ -82,7 +82,7 @@ function findLongestPalindrome(input) {
         }
     }
     
-    return longestPalindrome.trim();
+    return longestPalindrome;
 }
 
 function nearby_az(word) {
