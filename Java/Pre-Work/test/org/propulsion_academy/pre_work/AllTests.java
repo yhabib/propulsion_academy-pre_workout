@@ -11,6 +11,7 @@ public class AllTests {
 		suite.addTestSuite(FibonacciTest.class);
 		suite.addTestSuite(HelloTest.class);
 		suite.addTestSuite(FactorialTest.class);
+		suite.addTestSuite(PrimesTest.class);
 		// $JUnit-END$
 		return suite;
 	}
