@@ -155,3 +155,42 @@ For example:
 `is_power_of_two(8)` => true
 
 `is_power_of_two(24)` => false
+
+------------------------------------------------------------------------
+
+### 11. Paint Fill
+
+Implement a "paint fill" function similar to what is found in many image editing programs. That is, given a screen(represented by a two dimensional array of colors), a point, and a new color, fill in the surrounding area until the old color changes. For example:
+
+```javascript
+ const imageTest = [
+   [1, 2, 3, 4],
+   [5, 2, 2, 3],
+   [3, 2, 4, 6],
+   [9, 9, 2, 7]
+ ];
+
+ paintFill(imageTest, [0, 1], 7);
+
+ /* Output
+  [
+   [1, 7, 3, 4],
+   [5, 7, 7, 3],
+   [3, 7, 4, 6],
+   [9, 9, 7, 7]
+ ];
+ */
+```
+
+------------------------------------------------------------------------
+
+### 12. Roman numeral translator
+
+Write a function that takes a roman numeral as input, and returns the same number in Hindu-Arabic form (https://en.wikipedia.org/wiki/Roman_numerals).
+  
+```javascript
+  translator('MCMLIV');         // 1954
+  translator('MCCLXXVIII');     // 1278
+```
+  
+**Extra credit**: write a second function that takes a number as input and returns its roman numeral.
