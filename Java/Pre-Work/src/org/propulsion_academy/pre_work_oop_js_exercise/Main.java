@@ -21,5 +21,7 @@ public class Main {
 		player.selectTrack(2);
 		
 		player.printTracksInfo();
+		
+		player.playEveryTwoSeconds();
 	}
 }
