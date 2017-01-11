@@ -158,4 +158,24 @@ describe('-- JS basic algorithms --', () => {
             f.is_power_of_two(inputD).should.equals(outputD);
         });
     });
+
+    describe('12.A Convert from roman to natural', () => {
+        it(`should return 1954`, () => {
+           f.translateToHindu_Arabic('MCMLIV').should.equal(1954);
+           
+        });
+        it(`should return 1278`, () => {
+           f.translateToHindu_Arabic('MCCLXXVIII').should.equal(1278);
+        });
+    });
+
+    describe('12.B Convert from natural to roman', () => {
+        it(`should return MCMLIV`, () => {
+           f.translateToRoman(1954).should.equal('MCMLIV');
+           
+        });
+        it(`should return MCCLXXVIII`, () => {
+           f.translateToRoman(1278).should.equal('MCCLXXVIII');
+        });
+    });
 });

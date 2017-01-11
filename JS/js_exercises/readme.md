@@ -167,7 +167,7 @@ Implement a "paint fill" function similar to what is found in many image editing
    [1, 2, 3, 4],
    [5, 2, 2, 3],
    [3, 2, 4, 6],
-   [9, 9, 2, 7]
+   [9, 9, 7, 2]
  ];
 
  paintFill(imageTest, [0, 1], 7);
@@ -177,7 +177,7 @@ Implement a "paint fill" function similar to what is found in many image editing
    [1, 7, 3, 4],
    [5, 7, 7, 3],
    [3, 7, 4, 6],
-   [9, 9, 7, 7]
+   [9, 9, 7, 2]
  ];
  */
 ```
