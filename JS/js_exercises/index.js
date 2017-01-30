@@ -10,7 +10,9 @@ module.exports = {
     findLongestPalindrome: findLongestPalindrome,
     nearby_az: nearby_az,
     two_sum: two_sum,
-    is_power_of_two: is_power_of_two
+    is_power_of_two: is_power_of_two,
+    translateToHindu_Arabic: translateToHindu_Arabic,
+    translateToRoman: translateToRoman
 };
 
 function reverse(input) {
@@ -110,4 +112,52 @@ function is_power_of_two(num) {
     if (num === 0) return false;
     if (num === 1) return true;
     return num % 2 !== 0 ? false : is_power_of_two(num / 2);
+}
+
+function paintFill(image, point, newValue) {
+    // first the point
+    const oldValue = image[point];
+    image[point] = newValue;
+
+    // check if the neightbors have the same value
+    
+
+    // update point
+}
+
+function translateToHindu_Arabic(roman) {
+    const romans = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM','M'];
+    const decimals = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
+    const decimalComposition = roman.split('').map(r => decimals[romans.indexOf(r)]);
+
+    let output = 0;
+    
+    for(let i=0; i<decimalComposition.length; i++) {
+        if(i < decimalComposition.length - 1 && decimalComposition[i] < decimalComposition[i+1])
+            output -= decimalComposition[i];
+        else
+            output += decimalComposition[i];
+    }
+    return output;
+}
+function translateToRoman(num) {
+  const romans = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM','M'];
+  const decimals = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
+  let romanNum = "";
+
+  while(num > 0){
+    for (var i=0; i<decimals.length; i++) {
+      if(num >= 1000) {
+        romanNum += romans[romans.length - 1];
+        num -= decimals[decimals.length -1];
+        break;   
+      }
+      else if(num / decimals[i] < 1){
+        romanNum += romans[i-1];
+        num -= decimals[i-1];
+        break;   
+      }
+    }
+  }
+  return romanNum;
 }
