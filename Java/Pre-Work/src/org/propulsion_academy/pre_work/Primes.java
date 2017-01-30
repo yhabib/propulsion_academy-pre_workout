@@ -16,8 +16,13 @@ public class Primes {
 	}
 
 	public static void main(String[] args) {
-		int[] primes = IntStream.iterate(1, n -> n + 1).filter(Primes::isPrime).limit(20).toArray();
-
+		// @formatter:off
+		int[] primes = IntStream.iterate(1, n -> n + 1)
+				.filter(Primes::isPrime)
+				.limit(20)
+				.toArray();
+		// @formatter:on
+		
 		System.out.println(Arrays.toString(primes));
 	}
 }
