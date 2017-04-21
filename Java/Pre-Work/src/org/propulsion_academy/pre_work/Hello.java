@@ -11,8 +11,4 @@ public class Hello {
 		}
 		return greeting;
 	}
-
-	public static void main(String[] args) {
-		System.out.println(greeter(args));
-	}
 }

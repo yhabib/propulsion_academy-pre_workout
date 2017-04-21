@@ -3,6 +3,7 @@ package org.propulsion_academy.pre_work;
 import java.util.stream.IntStream;
 
 public class Factorial {
+
 	static int factorialStream(int n) {
 		return IntStream.rangeClosed(1, n).reduce(1, (a, b) -> a * b);
 	}
@@ -20,13 +21,5 @@ public class Factorial {
 			n--;
 		}
 		return factorial;
-	}
-
-	public static void main(String... args) {
-		IntStream.rangeClosed(0, 5).forEach(n -> print(n));
-	}
-
-	private static void print(int n) {
-		System.out.println(n + "! = " + factorialStream(n));
 	}
 }
